@@ -26,7 +26,11 @@
     text-shadow: 0 0 0 #fff !important;
   }
 
-  h1, h2, h3, p, li {
+  h1,
+  h2,
+  h3,
+  p,
+  li {
     color: black !important;
   }
 
@@ -57,13 +61,23 @@ html {
 
 @screen sm {
   html {
-    font-size: calc( 13.176471px + (16 - 13.176471) * (100vw - 640px) / (811 - 640) );
+    font-size: calc(
+      13.176471px + (16 - 13.176471) * (100vw - 640px) / (811 - 640)
+    );
   }
+}
+@media print {
+  .pagebreak {
+    page-break-before: always;
+  } /* page-break-after works, as well */
+}
+@page {
+  margin-top: 2cm;
 }
 
 @screen md {
   html {
-    font-size: calc( 12.288px + (16 - 12.288) * (100vw - 811px) / (1051 - 811) );
+    font-size: calc(12.288px + (16 - 12.288) * (100vw - 811px) / (1051 - 811));
   }
 }
 

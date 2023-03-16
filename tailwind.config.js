@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     /* For Letter size */
     screens: {
-      print: {"raw": "print"},
+      print: { raw: "print" },
       xsm: "500px",
       sm: "640px",
       md: "833px",
@@ -24,7 +24,7 @@ module.exports = {
     // },
     extend: {
       fontFamily: {
-        "firago": ["FiraGO", ...defaultTheme.fontFamily.sans],
+        firago: ["FiraGO", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         sm2: "0.9375rem", // 15px label
@@ -37,51 +37,51 @@ module.exports = {
         normal: "1.4",
       },
       maxWidth: {
-        "letter": "66.40625rem",
-        "a4": "64.609375rem"
+        letter: "66.40625rem",
+        a4: "90.609375rem",
       },
       height: {
-        "letter": "85.9375rem",
+        letter: "85.9375rem",
         "letter-col": "71.627937rem",
         "letter-col-full": "77.9375rem",
-        "a4": "91.350883rem",
+        a4: "91.350883rem",
         "a4-col": "77.04132rem",
         "a4-col-full": "83.350883rem",
       },
       spacing: {
-        "0.5": "0.07rem",
-        "0.7": "0.2rem",
-        "0.8": "0.22rem",
-        "1.5": "0.4rem",
-        "2.5": "0.67rem",
-        "3.2": "0.8125rem", // 16px
-        "4.5": "1.18rem",
-        "4.4": "1.125rem",
-        "4.3": "1.0625rem",
-        "7": "1.6rem",
-        "11": "2.75rem",
+        0.5: "0.07rem",
+        0.7: "0.2rem",
+        0.8: "0.22rem",
+        1.5: "0.4rem",
+        2.5: "0.67rem",
+        3.2: "0.8125rem", // 16px
+        4.5: "1.18rem",
+        4.4: "1.125rem",
+        4.3: "1.0625rem",
+        7: "1.6rem",
+        11: "2.75rem",
       },
       colors: {
         gray: {
-          "250": "hsl(210, 40%, 93.5%)",
-          "550": "hsl(218, 20%, 63%)",
-          "650": "hsl(216, 15%, 48%)",
-          "750": "hsl(214, 17%, 32%)",
-          ...defaultTheme.colors.gray
+          250: "hsl(210, 40%, 93.5%)",
+          550: "hsl(218, 20%, 63%)",
+          650: "hsl(216, 15%, 48%)",
+          750: "hsl(214, 17%, 32%)",
+          ...defaultTheme.colors.gray,
         },
-        link: "#fbf3f3"
+        link: "#fbf3f3",
       },
     },
   },
 
   variants: {
-    textColor: ["responsive", 'hover', 'focus', 'group-hover']
+    textColor: ["responsive", "hover", "focus", "group-hover"],
   },
 
   plugins: [
     plugin(function ({ addBase, addUtilities, theme }) {
       addBase({
-        "body": {
+        body: {
           "-webkit-font-smoothing": "subpixel-antialiased",
         },
       });
@@ -150,11 +150,11 @@ module.exports = {
           "text-transform": "uppercase",
           "font-feature-settings": "'case' on",
         },
-      }
+      };
 
       addUtilities(typographyUtils, {
         variants: ["responsive"],
-      })
+      });
 
       /**
        * Miscellaneous Utilities
@@ -162,13 +162,13 @@ module.exports = {
 
       const miscUtils = {
         ".contents": {
-          "display": "contents",
+          display: "contents",
         },
-      }
+      };
 
       addUtilities(miscUtils, {
         variants: ["responsive"],
-      })
+      });
 
       /**
        * Project Spicific Utilities
@@ -177,12 +177,12 @@ module.exports = {
       const projectSpecificUtils = {
         ".border-inset": {
           "box-shadow": `inset 0 0 0 1px ${theme("colors.gray.400")}`,
-        }
-      }
+        },
+      };
 
       addUtilities(projectSpecificUtils, {
         variants: ["responsive"],
-      })
+      });
 
       /**
        * CSS Multi-Column Layout Utilities
@@ -202,7 +202,7 @@ module.exports = {
           "column-gap": "2.1875rem",
         },
         ".hyphens-manual": {
-          "hyphens": "manual",
+          hyphens: "manual",
         },
         ".break-after-col": {
           "break-after": "column",
@@ -222,12 +222,11 @@ module.exports = {
         ".col-fill-balance": {
           "column-fill": "balance",
         },
-      }
+      };
 
       addUtilities(columnUtils, {
         variants: ["responsive"],
-      })
+      });
     }),
-
-  ]
+  ],
 };
