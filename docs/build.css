@@ -165410,3 +165410,22 @@ body .icon-parent::before {
          column-fill: balance;
   }
 }
+
+
+.testbla {
+  background-color: #79818d0f;
+  flex: 220%;
+  padding: 20px 20px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.skills-section{
+  border-top: 20px;
+  border-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #c2cfcf;
+  padding: 5px
+}
